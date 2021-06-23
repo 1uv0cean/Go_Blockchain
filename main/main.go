@@ -15,7 +15,7 @@ func main() {
 	for _, block := range chain.Blocks {
 		fmt.Println()
 		if len(block.PrevHash) < 1 {
-			fmt.Printf("Previous Hash: Nonel\n")
+			fmt.Printf("Previous Hash: None\n")
 		} else {
 			fmt.Printf("Previous Hash: %x\n", block.PrevHash)
 		}
