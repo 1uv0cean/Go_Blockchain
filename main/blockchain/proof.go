@@ -36,7 +36,6 @@ func (pow *ProofOfWork) InitData(nonce int) []byte { // nonce: same role as coun
 		},
 		[]byte{},
 	)
-
 	return data
 }
 
@@ -53,7 +52,7 @@ func (pow *ProofOfWork) Run() (int, []byte) {
 		fmt.Printf("\r%x", hash)
 		intHash.SetBytes(hash[:])
 
-		if intHash.Cmp(pow.Target) = -1{
+		if intHash.Cmp(pow.Target) == -1 {
 			break
 		} else {
 			nonce++
